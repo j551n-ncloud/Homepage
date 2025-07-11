@@ -1,3 +1,4 @@
+
 import { Server, Cloud, Book, Utensils, Activity, StickyNote, Package, Shield, GitBranch, Wrench, FileSignature, BrainCircuit } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -104,11 +105,11 @@ export function Services() {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader className="p-4 pb-2">
-                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-tech-100 text-tech-600 mb-4">
-                    <service.icon className="h-6 w-6" />
+                  <div className="flex items-center gap-3 mb-2">
+                    <service.icon className="h-5 w-5 text-primary" />
+                    <CardTitle className={`${isMobile ? 'text-lg' : 'text-xl'}`}>{service.title}</CardTitle>
                   </div>
-                  <CardTitle className={`${isMobile ? 'text-lg' : 'text-xl'}`}>{service.title}</CardTitle>
-                  <p className="text-sm text-tech-600 mt-1">
+                  <p className="text-sm text-muted-foreground mt-1">
                     {service.url}
                   </p>
                 </CardHeader>
