@@ -119,14 +119,8 @@ export function Expertise() {
         {
           area: "Open WebUI",
           experience: "AI tool integration & usage",
-          additionalKnowledge: "Self-hosted LLMs, Open WebUI workflows",
+          additionalKnowledge: "Self-hosted LLMs, Open WebUI workflows, Anki Card Creator (AI endpoint)",
           icon: <Globe className="h-5 w-5 text-primary" />
-        },
-        {
-          area: "Anki Card Creator (AI endpoint)",
-          experience: "Custom AI-powered endpoint for Anki",
-          additionalKnowledge: "Prompt design, API integration, educational AI",
-          icon: <Settings className="h-5 w-5 text-primary" />
         }
       ]
     },
@@ -164,8 +158,8 @@ export function Expertise() {
       items: [
         {
           area: "Networking",
-          experience: "Network configuration & troubleshooting",
-          additionalKnowledge: "LACP bonds, VLANs, routing, IPAM, Netbox",
+          experience: "Network configuration, datacenter planning & server cabling",
+          additionalKnowledge: "LACP bonds, VLANs, routing, IPAM, Netbox (including documentation), Proxmox SDN, datacenter network plan creation, server cabling, project onboarding",
           icon: <Network className="h-5 w-5 text-primary" />
         },
         {
@@ -173,6 +167,12 @@ export function Expertise() {
           experience: "Docker deployment & Kubernetes orchestration",
           additionalKnowledge: "Docker Compose, Dockerfile optimization, Helm charts, K3S deployment, custom operators",
           icon: <Database className="h-5 w-5 text-primary" />
+        },
+        {
+          area: "CretA",
+          experience: "Research infrastructure platform integration",
+          additionalKnowledge: "User management, resource allocation, project onboarding",
+          icon: <Server className="h-5 w-5 text-primary" />
         }
       ]
     }
