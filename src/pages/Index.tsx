@@ -2,7 +2,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { Hero } from "@/components/home/Hero";
 import { About } from "@/components/home/About";
-import { Expertise } from "@/components/home/Expertise";
 import { Services } from "@/components/home/Services";
 import { FloatingContactButton } from "@/components/home/FloatingContactButton";
 import { useEffect, useState } from "react";
@@ -46,9 +45,6 @@ const Index = () => {
           <About />
         </div>
         <div className="animate-float-up" style={{animationDelay: "0.5s"}}>
-          <Expertise />
-        </div>
-        <div className="animate-float-up" style={{animationDelay: "0.7s"}}>
           <Services />
         </div>
       </div>

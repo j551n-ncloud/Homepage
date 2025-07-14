@@ -67,7 +67,7 @@ export function Expertise() {
     {
       area: "CI/CD",
       experience: "Pipeline implementation & management",
-      additionalKnowledge: "GitHub Actions, GitLab CI/CD",
+      additionalKnowledge: "GitHub Actions, Jenkins, GitLab CI/CD",
       icon: <Code className="h-5 w-5 text-primary" />
     },
     {

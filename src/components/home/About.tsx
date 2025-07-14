@@ -1,8 +1,10 @@
 
 import { Server, Terminal, Database, Cpu } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 
 export function About() {
+  const navigate = useNavigate();
   const skills = [
     {
       icon: Server,
@@ -46,7 +48,11 @@ export function About() {
           <div className="lg:col-span-7">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {skills.map((skill, index) => (
-                <Card key={index} className="bg-card border-2 border-border rounded-none hover:border-blue-500 transition-colors staggered-item animate-fade-up hover-lift">
+                <Card 
+                  key={index} 
+                  className="bg-card border-2 border-border rounded-none hover:border-blue-500 transition-colors staggered-item animate-fade-up hover-lift cursor-pointer"
+                  onClick={() => navigate('/expertise')}
+                >
                   <CardHeader className="p-6">
                     <div className="w-12 h-12 flex items-center justify-center bg-blue-50 text-blue-600 mb-4">
                       <skill.icon className="h-6 w-6" />

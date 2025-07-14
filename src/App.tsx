@@ -12,6 +12,7 @@ import LegalNotice from "./pages/LegalNotice";
 import NotFound from "./pages/NotFound";
 import Homelab from "./pages/Homelab";
 import Career from "./pages/Career";
+import Expertise from "./pages/Expertise";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/career" element={<Career />} />
             <Route path="/homelab" element={<Homelab />} />
+            <Route path="/expertise" element={<Expertise />} />
             <Route path="/legal" element={<Legal />} />
             <Route path="/legal/privacy" element={<LegalPrivacy />} />
             <Route path="/legal/notice" element={<LegalNotice />} />

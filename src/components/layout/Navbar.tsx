@@ -22,9 +22,10 @@ export function Navbar() {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   
-  // Base navigation items - adding Career
+  // Base navigation items - adding Career and Expertise
   const navItems = [
     { name: "Home", path: "/" },
+    { name: "Expertise", path: "/expertise" },
     { name: "Career", path: "/career" },
     { name: "Homelab", path: "/homelab" },
     { name: "Legal", path: "/legal" }
