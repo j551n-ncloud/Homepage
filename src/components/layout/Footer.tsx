@@ -38,6 +38,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/expertise" className="text-muted-foreground hover:text-tech-500 transition-colors">
+                  Expertise
+                </Link>
+              </li>
+              <li>
                 <Link to="/homelab" className="text-muted-foreground hover:text-tech-500 transition-colors">
                   Homelab
                 </Link>
