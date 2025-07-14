@@ -167,12 +167,6 @@ export function Expertise() {
           experience: "Docker deployment & Kubernetes orchestration",
           additionalKnowledge: "Docker Compose, Dockerfile optimization, Helm charts, K3S deployment, custom operators",
           icon: <Database className="h-5 w-5 text-primary" />
-        },
-        {
-          area: "CretA",
-          experience: "Research infrastructure platform integration",
-          additionalKnowledge: "User management, resource allocation, project onboarding",
-          icon: <Server className="h-5 w-5 text-primary" />
         }
       ]
     }
