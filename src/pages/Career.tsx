@@ -1,6 +1,7 @@
 
 import { Layout } from "@/components/layout/Layout";
 import { useEffect } from "react";
+import { Briefcase, GraduationCap, Wrench, Laptop2, Car, FlaskConical, Hospital } from "lucide-react";
 
 const Career = () => {
   useEffect(() => {
@@ -52,6 +53,16 @@ const Career = () => {
     }
   ];
 
+  const iconMap = [
+    <Laptop2 className="h-4 w-4 text-white" />, // IT Specialist
+    <Wrench className="h-4 w-4 text-white" />, // Mechanic
+    <Car className="h-4 w-4 text-white" />, // Automotive
+    <FlaskConical className="h-4 w-4 text-white" />, // BASF
+    <Briefcase className="h-4 w-4 text-white" />, // Porsche
+    <GraduationCap className="h-4 w-4 text-white" />, // TRW
+    <Hospital className="h-4 w-4 text-white" /> // GRN
+  ];
+
   return (
     <Layout>
       <div className="min-h-screen bg-background">
@@ -68,42 +79,45 @@ const Career = () => {
           </div>
 
           {/* Career Timeline */}
-          <div className="space-y-12">
-            {careerItems.map((item, index) => (
-              <div 
-                key={index}
-                className="group animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="border-l-2 border-border pl-8 md:pl-12 pb-8">
-                  {/* Timeline dot */}
-                  <div className="absolute w-4 h-4 bg-primary rounded-full -ml-[33px] md:-ml-[37px] mt-1.5 group-hover:scale-125 transition-transform duration-200"></div>
-                  
-                  {/* Content */}
-                  <div className="space-y-3">
-                    {/* Period */}
-                    <div className="text-sm font-medium text-primary">
-                      {item.period}
+          <div className="relative pl-8 md:pl-12">
+            {/* Vertical timeline line */}
+            <div className="absolute left-2 md:left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-primary/60 to-primary/10 rounded-full pointer-events-none animate-fade-in" style={{zIndex:0}}></div>
+            <div className="space-y-12 relative z-10">
+              {careerItems.map((item, index) => (
+                <div 
+                  key={index}
+                  className="group relative animate-fade-up"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  {/* Timeline dot with icon */}
+                  <div className="absolute left-[-38px] md:left-[-42px] top-2 flex items-center justify-center w-8 h-8 bg-primary rounded-full shadow-lg border-4 border-background z-20 animate-bounce-in transition-transform duration-300 group-hover:scale-110">
+                    {iconMap[index]}
+                  </div>
+                  {/* Card content */}
+                  <div className="ml-2 md:ml-6 p-6 bg-card rounded-lg shadow-md border border-border transition-transform duration-300 group-hover:scale-[1.03] group-hover:shadow-lg animate-fade-up animate-slide-in-left">
+                    <div className="space-y-3">
+                      {/* Period */}
+                      <div className="text-sm font-medium text-primary">
+                        {item.period}
+                      </div>
+                      {/* Company and Role */}
+                      <div>
+                        <h3 className="text-xl md:text-2xl font-bold text-foreground mb-1">
+                          {item.company}
+                        </h3>
+                        <h4 className="text-lg font-semibold text-muted-foreground">
+                          {item.role}
+                        </h4>
+                      </div>
+                      {/* Description */}
+                      <p className="text-muted-foreground leading-relaxed">
+                        {item.description}
+                      </p>
                     </div>
-                    
-                    {/* Company and Role */}
-                    <div>
-                      <h3 className="text-xl md:text-2xl font-bold text-foreground mb-1">
-                        {item.company}
-                      </h3>
-                      <h4 className="text-lg font-semibold text-muted-foreground">
-                        {item.role}
-                      </h4>
-                    </div>
-                    
-                    {/* Description */}
-                    <p className="text-muted-foreground leading-relaxed">
-                      {item.description}
-                    </p>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           {/* Bottom Section */}
