@@ -96,6 +96,37 @@ export function Expertise() {
           experience: "Version control & collaboration",
           additionalKnowledge: "PR workflow, project management",
           icon: <Github className="h-5 w-5 text-primary" />
+        },
+        // New items below
+        {
+          area: "Python",
+          experience: "Scripting, automation, and data analysis",
+          additionalKnowledge: "Pandas, FastAPI, scripting, automation",
+          icon: <Code className="h-5 w-5 text-primary" />
+        },
+        {
+          area: "SQL",
+          experience: "Database querying & management",
+          additionalKnowledge: "PostgreSQL, MySQL, query optimization",
+          icon: <Database className="h-5 w-5 text-primary" />
+        },
+        {
+          area: "AI Knowledge",
+          experience: "Machine learning & AI concepts",
+          additionalKnowledge: "Prompt engineering, LLMs, model deployment",
+          icon: <Cpu className="h-5 w-5 text-primary" />
+        },
+        {
+          area: "Open WebUI",
+          experience: "AI tool integration & usage",
+          additionalKnowledge: "Self-hosted LLMs, Open WebUI workflows",
+          icon: <Globe className="h-5 w-5 text-primary" />
+        },
+        {
+          area: "Anki Card Creator (AI endpoint)",
+          experience: "Custom AI-powered endpoint for Anki",
+          additionalKnowledge: "Prompt design, API integration, educational AI",
+          icon: <Settings className="h-5 w-5 text-primary" />
         }
       ]
     },
