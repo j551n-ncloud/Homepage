@@ -28,6 +28,13 @@ export function About() {
     },
   ];
 
+  const sectionIdMap: Record<string, string> = {
+    "System Administration": "system-administration",
+    "DevOps": "devops",
+    "Virtualization": "virtualization",
+    "Infrastructure": "infrastructure"
+  };
+
   return (
     <section id="about" className="py-24 bg-background">
       <div className="container mx-auto px-8">
@@ -51,7 +58,7 @@ export function About() {
                 <Card 
                   key={index} 
                   className="bg-card border-2 border-border rounded-none hover:border-blue-500 transition-colors staggered-item animate-fade-up hover-lift cursor-pointer"
-                  onClick={() => navigate('/expertise')}
+                  onClick={() => navigate(`/expertise#${sectionIdMap[skill.title]}`)}
                 >
                   <CardHeader className="p-6">
                     <div className="w-12 h-12 flex items-center justify-center bg-blue-50 text-blue-600 mb-4">
