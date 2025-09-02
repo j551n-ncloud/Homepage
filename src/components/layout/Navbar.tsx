@@ -34,7 +34,7 @@ export function Navbar() {
   // Popular services
   const popularServices = [
     { name: "Cloud", url: "cloud.j551n.com" },
-    { name: "BookStack", url: "bookstack.j551n.com" },
+    { name: "Fumadocs", url: "docu.j551n.com" },
     { name: "Repo", url: "repo.j551n.com" },
     { name: "Notes", url: "notes.j551n.com" },
     { name: "Recipe", url: "recipe.j551n.com" },

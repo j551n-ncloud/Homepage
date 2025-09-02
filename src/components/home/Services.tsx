@@ -27,9 +27,9 @@ export function Services() {
     },
     {
       icon: Book,
-      title: "BookStack Documentation",
-      url: "bookstack.j551n.com",
-      description: "Easy organization and management of documents with team collaboration and powerful search."
+      title: "Fumadocs Documentation",
+      url: "docu.j551n.com",
+      description: "Modern documentation platform built with Fumadocs for fast, searchable, and beautiful docs."
     },
     {
       icon: Utensils,

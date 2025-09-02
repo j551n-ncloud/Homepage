@@ -76,7 +76,7 @@ export function Footer() {
                 <a href="https://cloud.j551n.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-tech-500 transition-colors">Cloud</a>
               </div>
               <div>
-                <a href="https://bookstack.j551n.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-tech-500 transition-colors">Bookstack</a>
+                <a href="https://docu.j551n.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-tech-500 transition-colors">Fumadocs</a>
               </div>
               <div>
                 <a href="https://repo.j551n.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-tech-500 transition-colors">Repo</a>
