@@ -173,8 +173,8 @@
   @apply list-decimal ml-5 my-2;
 }
 
-.markdown a {
-  @apply text-tech-500 hover:underline;
+  .markdown a {
+    @apply text-tech-500 hover:underline;
 }
 
 .markdown code {

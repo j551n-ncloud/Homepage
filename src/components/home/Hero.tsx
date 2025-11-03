@@ -1,5 +1,17 @@
-import { ArrowDown, Mail } from "lucide-react";
+"use client";
+
+import {
+  ArrowDown,
+  ArrowUpRight,
+  Cpu,
+  Mail,
+  Network,
+  Shield,
+  Workflow,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { IconCircle } from "@/components/ui/icon-circle";
 
 export function Hero() {
   const scrollToAbout = () => {
@@ -13,73 +25,129 @@ export function Hero() {
     window.location.href = "mailto:Johannes.quangminh.nguyen@gmail.com";
   };
 
+  const differentiators = [
+    {
+      icon: Workflow,
+      title: "Automation mindset",
+      description: "Ansible playbooks and scripts replace repetitive tasks and keep changes consistent.",
+    },
+    {
+      icon: Cpu,
+      title: "Homelab craft",
+      description: "Private lab for experimenting with virtualization, storage, and service hardening.",
+    },
+    {
+      icon: Network,
+      title: "Networking focus",
+      description: "Hands-on work with VLANs, VPN, and secure remote access via Cloudflare Tunnels.",
+    },
+    {
+      icon: Shield,
+      title: "Security aware",
+      description: "Versioned backups, secrets management, and documentation keep services trustworthy.",
+    },
+  ];
+
+  const stats = [
+    {
+      label: "Managed services",
+      value: "Private homelab",
+      description: "Self-hosted apps that support learning, note taking, and daily workflows.",
+    },
+    {
+      label: "Observability",
+      value: "Grafana dashboards",
+      description: "Dashboards track hardware usage, uptime, and backups across nodes.",
+    },
+    {
+      label: "Focus",
+      value: "Automation-first",
+      description: "Continuously improving with infrastructure-as-code and scripting experiments.",
+    },
+  ];
+
   return (
-    <section className="relative bg-background py-32 overflow-hidden border-b border-border">
-      <div className="container mx-auto px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        <div className="lg:col-span-8 lg:col-start-3">
-          <div className="space-y-8">
-            <div className="flex items-center justify-center lg:justify-start">
-              <img 
-                src="/favicon.png?v=2" 
-                alt="Logo" 
-                className="w-16 h-16 rounded-sm border border-border animate-rotate-in animate-pulse-glow"
-              />
-            </div>
-            
-            <div className="space-y-6">
-              <h1 className="text-5xl lg:text-7xl font-bold tracking-tight animate-float-up">
-                Johannes Nguyen
-              </h1>
-              
-              <h2 className="text-2xl lg:text-3xl font-normal animate-slide-in-left" style={{animationDelay: "0.2s"}}>
-                IT Technician, <span className="text-blue-500">System Administrator</span>, <br className="hidden md:block" />
-                Apprentice & Homelab Enthusiast
-              </h2>
-              
-              <p className="text-xl text-muted-foreground animate-fade-in" style={{animationDelay: "0.4s"}}>
-                Passionate about Linux, virtualization, and infrastructure as code. <br className="hidden md:block" />
-                Currently working at the German Cancer Research Center.
-              </p>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-up" style={{animationDelay: "0.6s"}}>
-              <Button 
-                className="bg-blue-600 hover:bg-blue-700 rounded-none hover-glow"
-                onClick={handleContactClick}
+    <section className="relative overflow-hidden border-b border-border bg-gradient-to-b from-background via-background to-muted/40 py-32">
+      <div className="pointer-events-none absolute inset-0">
+  <div className="absolute -left-24 top-24 h-64 w-64 rounded-full bg-tech-500/10 blur-3xl" />
+  <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl" />
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(30,136,229,0.18),_transparent_60%)]" />
+      </div>
+
+      <div className="container relative z-10 mx-auto grid grid-cols-1 items-center gap-12 px-6 md:px-8 lg:grid-cols-[1.15fr_1fr]">
+        <div className="space-y-10">
+          <div className="flex flex-col gap-6">
+            <Badge variant="outline" className="w-fit border-tech-500/50 text-tech-600">
+              System Administrator & DevOps Apprentice
+            </Badge>
+            <h1 className="max-w-3xl text-5xl font-bold leading-tight tracking-tight lg:text-6xl">
+              Building resilient infrastructure and modern tooling for research teams
+            </h1>
+            <p className="max-w-2xl text-lg text-muted-foreground">
+              I help scientists and engineers stay productive by automating the boring parts, hardening platforms, and keeping services observable. Currently crafting reliable systems at the German Cancer Research Center.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-4 sm:flex-row">
+            <Button
+              className="rounded-none border-2 border-tech-500/60 bg-tech-500 text-tech-foreground shadow-[0_12px_30px_-18px_rgba(30,136,229,0.7)] transition-colors hover:bg-tech-600"
+              onClick={handleContactClick}
+            >
+              <Mail className="mr-2 h-4 w-4" /> Contact Me
+            </Button>
+            <Button
+              variant="outline"
+              onClick={scrollToAbout}
+              className="group rounded-none border-2 border-border bg-background/70 backdrop-blur hover:border-tech-500/60"
+            >
+              Learn More
+              <ArrowDown className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {differentiators.map((item) => (
+              <div
+                key={item.title}
+                className="group flex gap-4 rounded-sm border border-border/70 bg-card/70 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-tech-500/40 hover:shadow-[0_16px_42px_-24px_rgba(30,136,229,0.45)]"
               >
-                <Mail className="mr-2 h-4 w-4" />
-                Contact Me
-              </Button>
-              <Button 
-                variant="outline" 
-                onClick={scrollToAbout}
-                className="rounded-none group border-2 hover:bg-muted hover-lift"
-              >
-                Learn More
-                <ArrowDown className="ml-2 h-4 w-4 group-hover:animate-bounce" />
-              </Button>
-            </div>
+                <IconCircle icon={item.icon} size="sm" className="bg-muted text-foreground transition-colors group-hover:bg-tech-500/15 group-hover:text-tech-600" />
+                <div className="space-y-1">
+                  <p className="font-semibold text-foreground">{item.title}</p>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="hidden lg:block lg:col-span-2">
-          <div className="aspect-square bg-blue-500 animate-pulse-glow"></div>
+        <div className="mx-auto w-full max-w-md">
+          <div className="relative overflow-hidden rounded-sm border border-border/70 bg-card/80 backdrop-blur">
+            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-tech-500 via-blue-500 to-tech-500" />
+            <a
+              className="flex items-center gap-3 border-b border-border/60 px-6 py-4 transition-colors hover:bg-muted/40"
+              href="mailto:johannes.quangminh.nguyen@gmail.com"
+            >
+              <IconCircle icon={Mail} size="sm" className="bg-muted text-foreground" />
+              <div>
+                <p className="text-sm text-muted-foreground">Primary contact</p>
+                <p className="font-semibold text-foreground">johannes.quangminh.nguyen@gmail.com</p>
+              </div>
+              <ArrowUpRight className="ml-auto h-4 w-4 text-muted-foreground" />
+            </a>
+            <div className="grid grid-cols-1 divide-y divide-border/60">
+              {stats.map((stat) => (
+                <div key={stat.label} className="flex flex-col gap-2 px-6 py-5">
+                  <span className="text-sm uppercase tracking-wide text-muted-foreground">
+                    {stat.label}
+                  </span>
+                  <span className="text-3xl font-semibold text-foreground">{stat.value}</span>
+                  <p className="text-sm text-muted-foreground">{stat.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
-      
-      {/* Swiss design grid elements */}
-      <div className="absolute top-0 left-0 right-0 bottom-0 z-0 grid grid-cols-12 pointer-events-none">
-        <div className="col-span-1 border-r border-border h-full"></div>
-        <div className="col-span-1 border-r border-border h-full"></div>
-        <div className="col-span-1 border-r border-border h-full"></div>
-        <div className="col-span-1 border-r border-border h-full"></div>
-        <div className="col-span-1 border-r border-border h-full"></div>
-        <div className="col-span-1 border-r border-border h-full"></div>
-        <div className="col-span-1 border-r border-border h-full"></div>
-        <div className="col-span-1 border-r border-border h-full"></div>
-        <div className="col-span-1 border-r border-border h-full"></div>
-        <div className="col-span-1 border-r border-border h-full"></div>
-        <div className="col-span-1 border-r border-border h-full"></div>
       </div>
     </section>
   );
