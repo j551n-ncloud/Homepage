@@ -62,7 +62,7 @@ export function About() {
               About
             </Badge>
             <h2 className="text-4xl font-bold tracking-tight lg:text-5xl">
-              Crafting dependable infrastructure with a human touch
+              About me
             </h2>
             <p className="text-lg text-muted-foreground">
               I'm an apprentice system integrator at the German Cancer Research Center who lives and breathes Linux, automation, and resilient infrastructure. I focus on bringing Swiss-grade clarity to every project, from day-to-day operations to long-term platform design.

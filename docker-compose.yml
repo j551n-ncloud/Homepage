@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile
     container_name: johannes-nguyen-portfolio
     ports:
-      - "3000:3000"
+      - "8080:8080"
     restart: unless-stopped
     volumes:
       - .:/app
@@ -16,7 +16,7 @@ services:
     environment:
       - NODE_ENV=development
     healthcheck:
-      test: ["CMD", "wget", "--spider", "-q", "http://localhost:3000"]
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:8080"]
       interval: 30s
       timeout: 10s
       retries: 3

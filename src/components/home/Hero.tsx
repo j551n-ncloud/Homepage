@@ -82,8 +82,9 @@ export function Hero() {
             </Badge>
             <h1 className="max-w-3xl text-balance text-5xl font-bold leading-tight tracking-tight lg:text-6xl">
               <span className="block text-4xl text-foreground lg:text-[3.5rem]">Johannes Nguyen</span>
-              <span className="mt-4 block text-3xl font-semibold text-tech-600 lg:text-[2.75rem]">
-                IT Technician, System Administrator, Apprentice & Homelab Enthusiast
+              <span className="mt-4 block text-3xl font-semibold leading-tight text-tech-600 lg:text-[2.75rem]">
+                <span className="block">IT Technician & System Administrator</span>
+                <span className="block">Apprentice & Homelab Enthusiast</span>
               </span>
             </h1>
             <div className="space-y-3 text-lg text-muted-foreground">
