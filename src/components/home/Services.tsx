@@ -128,10 +128,10 @@ export function Services() {
             Services
           </Badge>
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-            Homelab services with production polish
+            Production-ready homelab services
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Each workload ships like it’s in the datacenter: infrastructure-as-code, off-site backups, automated patching, and live telemetry keep cloud storage, docs, and monitoring resilient.
+            Infra-as-code, off-site backups, automated patching, and live telemetry keep cloud, docs, and monitoring resilient.
           </p>
         </div>
 
@@ -147,20 +147,21 @@ export function Services() {
               <Card 
                 className="group h-full border border-border/70 bg-card/80 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-tech-500/40 hover:shadow-[0_20px_40px_-24px_rgba(30,136,229,0.5)]"
               >
-                <CardHeader className="flex flex-col gap-4 p-6 pb-4">
+                <CardHeader className="flex flex-col gap-3 p-4 pb-3">
                   <IconBadge
                     icon={service.icon}
                     tone={service.tone}
+                    size="sm"
                     className="transition-colors group-hover:bg-tech-500/20 group-hover:text-tech-600"
                   />
                   <div>
-                    <CardTitle className={`${isMobile ? "text-lg" : "text-xl"} text-foreground`}>
+                    <CardTitle className={`${isMobile ? "text-base" : "text-lg"} text-foreground`}>
                       {service.title}
                     </CardTitle>
                     <p className="mt-1 text-sm text-muted-foreground">{service.url}</p>
                   </div>
                 </CardHeader>
-                <CardContent className="px-6 pb-6 text-sm leading-relaxed text-muted-foreground">
+                <CardContent className="px-4 pb-4 text-sm leading-relaxed text-muted-foreground">
                   <p>{service.description}</p>
                 </CardContent>
               </Card>

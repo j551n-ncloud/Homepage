@@ -5,6 +5,7 @@ import "./globals.css";
 import { AppProviders } from "@/components/providers";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { FloatingContactButton } from "@/components/home/FloatingContactButton";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", display: "swap" });
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <Navbar />
             <main className="flex-1 pt-20 lg:pt-24">{children}</main>
             <Footer />
+            <FloatingContactButton />
           </div>
         </AppProviders>
       </body>

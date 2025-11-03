@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { Hero } from '@/components/home/Hero';
 import { About } from '@/components/home/About';
 import { Services } from '@/components/home/Services';
-import { FloatingContactButton } from '@/components/home/FloatingContactButton';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 export function HomePage() {
@@ -42,7 +41,6 @@ export function HomePage() {
       <div className="animate-float-up" style={{ animationDelay: '0.5s' }}>
         <Services />
       </div>
-      <FloatingContactButton />
     </div>
   );
 }

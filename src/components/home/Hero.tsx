@@ -78,14 +78,22 @@ export function Hero() {
         <div className="space-y-10">
           <div className="flex flex-col gap-6">
             <Badge variant="outline" className="w-fit border-tech-500/50 text-tech-600">
-              System Administrator & DevOps Apprentice
+              IT Technician & Homelab Enthusiast
             </Badge>
-            <h1 className="max-w-3xl text-5xl font-bold leading-tight tracking-tight lg:text-6xl">
-              Building resilient infrastructure and modern tooling for research teams
+            <h1 className="max-w-3xl text-balance text-5xl font-bold leading-tight tracking-tight lg:text-6xl">
+              <span className="block text-4xl text-foreground lg:text-[3.5rem]">Johannes Nguyen</span>
+              <span className="mt-4 block text-3xl font-semibold text-tech-600 lg:text-[2.75rem]">
+                IT Technician, System Administrator, Apprentice & Homelab Enthusiast
+              </span>
             </h1>
-            <p className="max-w-2xl text-lg text-muted-foreground">
-              I help scientists and engineers stay productive by automating the boring parts, hardening platforms, and keeping services observable. Currently crafting reliable systems at the German Cancer Research Center.
-            </p>
+            <div className="space-y-3 text-lg text-muted-foreground">
+              <p className="max-w-2xl">
+                Passionate about Linux, virtualization, and infrastructure as code.
+              </p>
+              <p className="max-w-2xl">
+                Currently working at the German Cancer Research Center.
+              </p>
+            </div>
           </div>
 
           <div className="flex flex-col gap-4 sm:flex-row">
