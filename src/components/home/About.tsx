@@ -78,11 +78,11 @@ export function About() {
               </div>
               <div className="rounded-sm border border-border/80 bg-card/60 p-4">
                 <p className="font-semibold text-foreground">Automation-first</p>
-                <p>GitHub Actions, Ansible, Terraform, and observability</p>
+                <p>GitHub Actions, GitLab CI/CD, Ansible, and observability</p>
               </div>
               <div className="rounded-sm border border-border/80 bg-card/60 p-4">
-                <p className="font-semibold text-foreground">Community-driven</p>
-                <p>Open-source contributor & mentor for junior engineers</p>
+                <p className="font-semibold text-foreground">Swiss-grade clarity</p>
+                <p>Terraform, open-source mentoring, and clear docs bring calm to daily ops and long-term platform design.</p>
               </div>
             </div>
             <Button

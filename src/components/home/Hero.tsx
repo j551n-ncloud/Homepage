@@ -31,7 +31,7 @@ export function Hero() {
     {
       label: "Focus",
       value: "Automation-first",
-      description: "Continuously improving with infrastructure-as-code and scripting experiments.",
+      description: "Continuously improving with infrastructure as code and scripting experiments.",
     },
   ];
 
