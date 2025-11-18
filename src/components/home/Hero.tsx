@@ -1,14 +1,6 @@
 "use client";
 
-import {
-  ArrowDown,
-  ArrowUpRight,
-  Cpu,
-  Mail,
-  Network,
-  Shield,
-  Workflow,
-} from "lucide-react";
+import { ArrowDown, ArrowUpRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { IconCircle } from "@/components/ui/icon-circle";
@@ -24,29 +16,6 @@ export function Hero() {
   const handleContactClick = () => {
     window.location.href = "mailto:Johannes.quangminh.nguyen@gmail.com";
   };
-
-  const differentiators = [
-    {
-      icon: Workflow,
-      title: "Automation mindset",
-      description: "Ansible playbooks and scripts replace repetitive tasks and keep changes consistent.",
-    },
-    {
-      icon: Cpu,
-      title: "Homelab craft",
-      description: "Private lab for experimenting with virtualization, storage, and service hardening.",
-    },
-    {
-      icon: Network,
-      title: "Networking focus",
-      description: "Hands-on work with VLANs, VPN, and secure remote access via Cloudflare Tunnels.",
-    },
-    {
-      icon: Shield,
-      title: "Security aware",
-      description: "Versioned backups, secrets management, and documentation keep services trustworthy.",
-    },
-  ];
 
   const stats = [
     {
@@ -114,20 +83,6 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {differentiators.map((item) => (
-              <div
-                key={item.title}
-                className="group flex gap-4 rounded-sm border border-border/70 bg-card/70 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-tech-500/40 hover:shadow-[0_16px_42px_-24px_rgba(30,136,229,0.45)]"
-              >
-                <IconCircle icon={item.icon} size="sm" className="bg-muted text-foreground transition-colors group-hover:bg-tech-500/15 group-hover:text-tech-600" />
-                <div className="space-y-1">
-                  <p className="font-semibold text-foreground">{item.title}</p>
-                  <p className="text-sm text-muted-foreground">{item.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
 
         <div className="mx-auto w-full max-w-md">
