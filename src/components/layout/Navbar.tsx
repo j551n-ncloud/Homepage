@@ -130,9 +130,6 @@ export function Navbar() {
           </NavigationMenu>
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <Button asChild variant="outline" className="rounded-none border-2 border-tech-500/70 bg-tech-500 text-tech-foreground hover:bg-tech-600">
-              <a href="mailto:johannes.quangminh.nguyen@gmail.com">Contact</a>
-            </Button>
           </div>
         </div>
 
@@ -182,9 +179,7 @@ export function Navbar() {
                   </a>
                 ))}
               </div>
-              <Button asChild variant="outline" className="mt-4 w-full rounded-none border-2 border-tech-500/70 bg-tech-500 text-tech-foreground hover:bg-tech-600">
-                <a href="mailto:johannes.quangminh.nguyen@gmail.com">Contact</a>
-              </Button>
+              {/* Contact button removed */}
             </div>
           </div>
         </div>
