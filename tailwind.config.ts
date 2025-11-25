@@ -1,12 +1,13 @@
+import tailwindcssAnimate from "tailwindcss-animate";
 import type { Config } from "tailwindcss";
 
 export default {
-  darkMode: ["class"],
+  darkMode: ["class", ".dark"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    "./src/app/**/*.{ts,tsx}",
+    "./src/components/**/*.{ts,tsx}",
+    "./src/hooks/**/*.{ts,tsx}",
+    "./src/lib/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -141,10 +142,6 @@ export default {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' }
         },
-        'slide-in-left': {
-          '0%': { transform: 'translateX(-50px)', opacity: '0' },
-          '100%': { transform: 'translateX(0)', opacity: '1' }
-        },
         'rotate-in': {
           '0%': { transform: 'rotate(-10deg) scale(0.9)', opacity: '0' },
           '100%': { transform: 'rotate(0) scale(1)', opacity: '1' }
@@ -167,8 +164,7 @@ export default {
         'scale-out': 'scale-out 0.3s ease-out',
         'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
         'bounce-in': 'bounce-in 0.6s ease-out',
-        'float-up': 'float-up 0.8s ease-out forwards',
-        'slide-in-left': 'slide-in-left 0.6s ease-out forwards',
+  'float-up': 'float-up 0.8s ease-out forwards',
         'rotate-in': 'rotate-in 0.7s ease-out forwards',
         'pulse-glow': 'pulse-glow 2s infinite'
       },
@@ -178,5 +174,5 @@ export default {
       }
     }
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 } satisfies Config;

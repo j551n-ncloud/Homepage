@@ -11,9 +11,8 @@ services:
       - "8080:8080"
     restart: unless-stopped
     volumes:
-      - ./src:/app/src
-      - ./public:/app/public
-      - ./index.html:/app/index.html
+      - .:/app
+      - /app/node_modules
     environment:
       - NODE_ENV=development
     healthcheck:

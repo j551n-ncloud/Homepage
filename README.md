@@ -1,98 +1,71 @@
+# Portfolio Website
 
+This repository hosts the Next.js implementation of the personal portfolio site. The original Vite build was migrated to Next.js 14 using the App Router, TypeScript, Tailwind CSS, and shadcn/ui.
 
-# Johannes Nguyen Portfolio
+## Features
 
-This is the source code for my personal tech portfolio, containerized using Docker. The app is set up to run in a lightweight and stable development environment with automatic health checks and live source code syncing.
+- Next.js 14 App Router with hybrid server and client components
+- Tailwind CSS design system backed by shadcn/ui primitives
+- Light and dark mode with a shared theme provider
+- Docker workflows for development and production deployments
 
-🔗 **Live Project:** [j551n.com](https://j551n.com)
+## Requirements
 
----
+- Node.js 18 or newer
+- npm 9 or newer
+- Docker and Docker Compose (optional for container workflows)
 
-## 🚀 Project Overview
-
-This portfolio showcases my technical projects, skills, and experience. It’s built to be easily deployed and maintained using Docker.
-
----
-
-## 🐳 Dockerized Setup
-
-This project uses Docker Compose for container orchestration.
-
-### 🧱 Docker Compose Configuration
-
-```yaml
-
-version: '3.8'
-
-services:
-  web:
-    build:
-      context: .
-      dockerfile: Dockerfile.prod
-    container_name: johannes-nguyen-portfolio-prod
-    ports:
-      - "8080:80"
-    restart: always
-    healthcheck:
-      test: ["CMD", "wget", "--spider", "-q", "http://localhost:80"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-    networks:
-      - portfolio-network
-
-networks:
-  portfolio-network:
-    driver: bridge
-
-```
-
-### 📦 Features
-
-- 🔄 **Hot-reloading:** Local source code (`./src`) is mounted directly into the container for seamless development.
-- ♻️ **Auto-restart:** Automatically restarts if the container stops unexpectedly.
-- 💡 **Healthcheck:** Ensures the app is healthy and responding on port `8080`.
-
----
-
-## 🛠️ Getting Started
-
-### Prerequisites
-
-- [Docker](https://www.docker.com/products/docker-desktop)
-- [Docker Compose](https://docs.docker.com/compose/install/)
-
-### Run the App
+## Local Development
 
 ```bash
-git clone https://github.com/j551n-ncloud/tech-portfolio-builder-de.git
-cd tech-portfolio-builder-de
-docker-compose up --build
+npm install
+npm run dev
 ```
 
-Open [http://localhost:8080](http://localhost:8080) in your browser to view the portfolio.
+The development server listens on http://localhost:8080.
 
----
+## Production Build
 
-## 📁 Project Structure
+```bash
+npm run build
+npm run start
+```
+
+Set the `PORT` environment variable if you need a different binding. The provided Docker setup defaults to port 8080.
+
+## Docker Usage
+
+Development container:
+
+```bash
+docker compose up --build
+```
+
+Production container:
+
+```bash
+docker compose -f docker-compose.prod.yml up --build -d
+```
+
+Each compose file maps container port 8080 to the host and includes a health check against `http://localhost:8080`.
+
+## Project Structure
 
 ```
 .
-├── Dockerfile
-├── docker-compose.yml
-└── src/
-    └── [Your portfolio source code]
+|-- Dockerfile
+|-- Dockerfile.prod
+|-- docker-compose.yml
+|-- docker-compose.prod.yml
+|-- next.config.mjs
+|-- public/
+`-- src/
+    |-- app/
+    |-- components/
+    |-- hooks/
+    `-- lib/
 ```
 
----
+## License
 
-## 🤝 Contributing
-
-Feel free to fork the repo and submit pull requests! Suggestions and improvements are always welcome.
-
----
-
-## 🧾 License
-
-This project is licensed under the MIT License.
-
+This project is released under the MIT License.
