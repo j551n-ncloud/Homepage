@@ -28,7 +28,7 @@ export default function Home() {
               </div>
               <div className="hero-right">
                 <p className="hero-headline">
-                  From automotive diagnostics to enterprise systems integration{" "}
+                  From automotive diagnostics to enterprise systems integration:{" "}
                   <strong>apprentice IT specialist at DKFZ</strong>, homelab operator, automation-first thinker.
                 </p>
                 <div className="hero-btns">

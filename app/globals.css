@@ -72,6 +72,7 @@ section { padding: 5.5rem 0; border-top: 1px solid var(--rule); }
   position: relative;
   background: url('/bg.jpg') center / cover no-repeat;
   min-height: calc(100vh - 56px);
+  min-height: calc(100dvh - 56px);
   display: flex; flex-direction: column;
   justify-content: flex-end;
   padding: 5rem clamp(1.5rem, 6vw, 5rem);
@@ -267,9 +268,11 @@ a.skill-group-label:hover { color: var(--accent); opacity: 1; }
 }
 .contact-item {
   padding: 1.5rem 2rem 1.5rem 0;
+  border: none;
   border-right: 1px solid var(--rule);
   text-decoration: none; color: var(--text);
   cursor: pointer; display: block; transition: color 150ms;
+  background: none; font: inherit; text-align: left; width: 100%;
 }
 .contact-item:nth-child(2) { padding-left: 2rem; }
 .contact-item:last-child { border-right: none; padding-left: 2rem; }
@@ -352,7 +355,10 @@ a.skill-group-label:hover { color: var(--accent); opacity: 1; }
   .stats { grid-template-columns: repeat(2,1fr); }
 }
 @media (max-width: 640px) {
-  .nav-links { display: none; }
+  .nav-wrap { padding: 0 1rem; }
+  .nav-logo { font-size: .7rem; }
+  .nav-links { gap: .9rem; }
+  .nav-links a { font-size: .62rem; letter-spacing: .02em; }
   section { padding: 3.5rem 0; }
   .section-row, .hero-bottom { grid-template-columns: 1fr; gap: 1.25rem; }
   .section-label { position: static; }

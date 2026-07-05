@@ -28,10 +28,10 @@ export default function OGImage() {
           src={bgBase64}
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
         />
-        {/* dark overlay matching hero */}
+        {/* soft overlay, text is dark so the light left side stays light */}
         <div style={{
           position: "absolute", inset: 0,
-          background: "linear-gradient(rgba(0,0,0,0.22), rgba(0,0,0,0.38))",
+          background: "linear-gradient(rgba(255,255,255,0.12), rgba(255,255,255,0.02))",
           display: "flex",
         }} />
 
@@ -68,8 +68,8 @@ export default function OGImage() {
                   ))}
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                  <div style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#5eead4", display: "flex" }} />
-                  <span style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#5eead4" }}>
+                  <div style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#2a7a2a", display: "flex" }} />
+                  <span style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#2a7a2a" }}>
                     Available
                   </span>
                 </div>

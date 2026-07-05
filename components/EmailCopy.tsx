@@ -8,16 +8,27 @@ export default function EmailCopy() {
   const [copied, setCopied] = useState(false);
 
   function handleClick() {
-    navigator.clipboard.writeText(EMAIL).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    });
+    navigator.clipboard
+      .writeText(EMAIL)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      })
+      .catch(() => {
+        // clipboard is unavailable outside secure contexts, open the mail client instead
+        window.location.href = `mailto:${EMAIL}`;
+      });
   }
 
   return (
-    <div className="contact-item" onClick={handleClick} style={{ cursor: "pointer" }}>
+    <button
+      type="button"
+      className="contact-item"
+      onClick={handleClick}
+      aria-label={`Copy email address ${EMAIL}`}
+    >
       <div className="ci-label">Email</div>
       <div className="ci-value">{copied ? "Copied!" : EMAIL}</div>
-    </div>
+    </button>
   );
 }
