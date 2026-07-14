@@ -10,11 +10,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Johannes Nguyen",
-  description: "IT Technician & Homelab Enthusiast. Apprentice IT Specialist at DKFZ.",
+  description: "IT Technician & Homelab Enthusiast. IT Specialist at DKFZ.",
   metadataBase: new URL("https://j551n.com"),
   openGraph: {
     title: "Johannes Nguyen",
-    description: "IT Technician & Homelab Enthusiast. Apprentice IT Specialist at DKFZ.",
+    description: "IT Technician & Homelab Enthusiast. IT Specialist at DKFZ.",
     url: "https://j551n.com",
     siteName: "Johannes Nguyen",
     type: "website",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Johannes Nguyen",
-    description: "IT Technician & Homelab Enthusiast. Apprentice IT Specialist at DKFZ.",
+    description: "IT Technician & Homelab Enthusiast. IT Specialist at DKFZ.",
   },
   icons: {
     icon: [

@@ -29,7 +29,7 @@ export default function Home() {
               <div className="hero-right">
                 <p className="hero-headline">
                   From automotive diagnostics to enterprise systems integration:{" "}
-                  <strong>apprentice IT specialist at DKFZ</strong>, homelab operator, automation-first thinker.
+                  <strong>IT specialist at DKFZ</strong>, homelab operator, automation-first thinker.
                 </p>
                 <div className="hero-btns">
                   <a href="#contact" className="btn btn-fill">Contact me</a>
@@ -49,7 +49,7 @@ export default function Home() {
             <Reveal className="section-label">About</Reveal>
             <Reveal>
               <div className="about-text">
-                <p>As an apprentice system integrator at the German Cancer Research Center, I work with Linux, automation, and resilient infrastructure, bringing precision and clarity to both everyday operations and long-term platform planning.</p>
+                <p>As an IT specialist for system integration at the German Cancer Research Center, I work with Linux, automation, and resilient infrastructure, bringing precision and clarity to both everyday operations and long-term platform planning.</p>
                 <p>Every chapter sharpened my ability to diagnose complex systems, collaborate with specialists, and keep critical services available. These are skills I now apply daily in IT.</p>
               </div>
               <div className="stats">
@@ -177,7 +177,7 @@ export default function Home() {
                   <div className="exp-period">2022 – Present</div>
                   <div>
                     <div className="exp-company"><a href="https://blog.j551n.com/dkfz/" target="_blank" rel="noopener noreferrer">German Cancer Research Center (DKFZ)</a></div>
-                    <div className="exp-role">Apprentice IT Specialist for System Integration</div>
+                    <div className="exp-role">IT Specialist for System Integration</div>
                   </div>
                 </div>
                 <div className="exp-item">
