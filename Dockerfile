@@ -1,4 +1,4 @@
-FROM node:22-alpine3.21 AS base
+FROM node:26-alpine3.24 AS base
 
 # ── deps ──────────────────────────────────────────────────────────────────────
 FROM base AS deps
