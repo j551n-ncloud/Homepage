@@ -1,4 +1,5 @@
 FROM node:26-alpine3.24 AS base
+RUN npm install -g npm@12
 
 # ── deps ──────────────────────────────────────────────────────────────────────
 FROM base AS deps
