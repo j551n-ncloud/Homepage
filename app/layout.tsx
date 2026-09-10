@@ -41,7 +41,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body style={{ fontFamily: "var(--font-inter), 'Helvetica Neue', Helvetica, sans-serif" }}>
-        <link rel="preload" as="image" href="/bg.jpg" />
         {children}
       </body>
     </html>

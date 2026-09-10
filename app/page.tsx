@@ -6,9 +6,34 @@ import EmailCopy from "@/components/EmailCopy";
 const version = (process.env.NEXT_PUBLIC_APP_VERSION ?? "dev").replace(/^v/, "");
 import Counter from "@/components/Counter";
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Johannes Nguyen",
+  jobTitle: "IT Specialist for System Integration",
+  url: "https://j551n.com",
+  email: "mailto:johannes.nguyen@j551n.com",
+  worksFor: {
+    "@type": "Organization",
+    name: "German Cancer Research Center (DKFZ)",
+    url: "https://blog.j551n.com/dkfz/",
+  },
+  sameAs: [
+    "https://github.com/j551n-ncloud",
+    "https://www.linkedin.com/in/johannesquangminh",
+    "https://blog.j551n.com",
+  ],
+};
+
 export default function Home() {
+  const year = new Date().getFullYear();
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
+      <link rel="preload" as="image" href="/bg.jpg" />
       <Nav />
 
       {/* HERO */}
@@ -260,7 +285,7 @@ export default function Home() {
         <footer className="footer-wrap">
           <span className="footer-brand-name">Johannes Nguyen · j551n.com</span>
           <div className="footer-meta">
-            <span>© 2026</span>
+            <span>© {year}</span>
             <a href={`https://github.com/j551n-ncloud/homepage/releases/tag/v${version}`} target="_blank" rel="noopener noreferrer">v{version}</a>
             <Link href="/legal/notice">Impressum</Link>
             <Link href="/legal/privacy">Privacy</Link>

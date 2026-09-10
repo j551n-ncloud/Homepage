@@ -94,7 +94,7 @@ section { padding: 5.5rem 0; border-top: 1px solid var(--rule); }
       rgba(8,12,14,.66) 100%);
   background-size: 100% 100%, 300% 300%;
   background-position: 0 0, 0% 50%;
-  animation: heroGradient 45s ease-in-out infinite;
+  animation: heroGradient 35s ease-in-out infinite;
 }
 @keyframes heroGradient {
   0%   { background-position: 0 0, 100% 50%; }
@@ -212,27 +212,6 @@ a.skill-group-label {
 }
 a.skill-group-label:hover { color: var(--accent); opacity: 1; }
 
-/* ── SERVICES TABLE ── */
-.svc-table { width: 100%; border-collapse: collapse; }
-.svc-table thead th {
-  font-size: .68rem; font-weight: 700;
-  letter-spacing: .1em; text-transform: uppercase;
-  color: var(--muted); padding: .625rem 0;
-  text-align: left; border-bottom: 2px solid var(--text);
-}
-.svc-table thead th:not(:last-child) { padding-right: 2rem; }
-.svc-table tbody tr { border-bottom: 1px solid var(--rule); transition: background 150ms; }
-.svc-table tbody tr:hover { background: var(--surface); }
-.svc-table tbody td { padding: .875rem 0; font-size: .8375rem; vertical-align: middle; }
-.svc-table tbody td:not(:last-child) { padding-right: 2rem; white-space: nowrap; }
-.svc-name { font-weight: 600; }
-.svc-url {
-  color: var(--muted); text-decoration: none;
-  font-family: monospace; font-size: .775rem; transition: color 150ms;
-}
-.svc-url:hover { color: var(--accent); }
-.svc-desc { font-size: .8rem; color: var(--muted); line-height: 1.55; }
-
 /* ── EXPERIENCE ── */
 .exp-list { display: flex; flex-direction: column; }
 .exp-item {
@@ -292,9 +271,7 @@ a.skill-group-label:hover { color: var(--accent); opacity: 1; }
   padding: 2rem clamp(1.5rem, 6vw, 5rem) 1.25rem;
   display: flex; justify-content: space-between; align-items: center; gap: 2rem;
 }
-.footer-brand { display: flex; flex-direction: column; gap: .35rem; }
 .footer-brand-name { font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text); }
-.footer-brand-tagline { font-size: .72rem; color: var(--muted); max-width: 380px; line-height: 1.55; }
 .footer-meta { display: flex; align-items: center; gap: 1.5rem; flex-shrink: 0; }
 .footer-meta a { font-size: .7rem; color: var(--muted); text-decoration: none; transition: color 150ms; letter-spacing: .03em; }
 .footer-meta a:hover { color: var(--text); }

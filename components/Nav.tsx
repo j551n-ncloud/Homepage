@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -13,7 +14,7 @@ export default function Nav() {
 
   return (
     <nav className={`nav-wrap${scrolled ? " nav-scrolled" : ""}`}>
-      <a className="nav-logo" href="/">Johannes Nguyen</a>
+      <Link className="nav-logo" href="/">Johannes Nguyen</Link>
       <ul className="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>

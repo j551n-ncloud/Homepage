@@ -26,6 +26,7 @@ export default function OGImage() {
         {/* background image */}
         <img
           src={bgBase64}
+          alt=""
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
         />
         {/* soft overlay, text is dark so the light left side stays light */}
